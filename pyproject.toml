@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "ongaku-mv"
+version = "0.1.0"
+description = "Service that helps to transfer music from Spotify"
+authors = ["AlanTheKnight <51376126+AlanTheKnight@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+spotipy = "^2.19.0"
+ytmusicapi = "^0.21.0"
+toml = "^0.10.2"
+colorama = "^0.4.4"
+vk-api = "^11.9.7"
+vk-audio = "^6.9"
+vkbottle = {url = "https://github.com/vkbottle/vkbottle/archive/master.zip"}
+vkbottle-types = {url = "https://github.com/vkbottle/vkbottle-types/archive/master.zip"}
+vk = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

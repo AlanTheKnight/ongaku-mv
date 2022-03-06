@@ -1,0 +1,6 @@
+.venv
+.cache
+__pycache__
+config.toml
+headers_auth.json
+my-songs.json
