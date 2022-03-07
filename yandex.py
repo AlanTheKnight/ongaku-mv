@@ -70,8 +70,8 @@ if __name__ == "__main__":
         )
         print_success(f"✅ Created playlist {playlist['name']}")
 
-        diff = Difference()
-        songs = []
+        # diff = Difference()
+        # songs = []
 
         count = 0
         for song in playlist["songs"]:
@@ -80,18 +80,20 @@ if __name__ == "__main__":
             search_results = client.search(query, type_="track")
             if not search_results['tracks'] or not search_results['tracks']['results']:
                 print_error(
-                    f"❌ Song {song['title']} not found in YT Music. Skipping.")
+                    f"❌ Song {song['title']} not found in Yandex Music. Skipping.")
                 continue
             song_id = str(search_results['tracks']['results'][0]['id'])
             album_id = str(search_results['tracks']
                            ['results'][0]['albums'][0]['id'])
             print_success(
                 f"✅ Found https://music.yandex.ru/album/{album_id}/track/{song_id}")
-            songs.append({'id': song_id, 'album_id': album_id})
+            # songs.append({'id': song_id, 'album_id': album_id})
+            p.insert_track(song_id, album_id)
+            p.revision += 1
             count += 1
 
-        diff.add_insert(0, tracks=songs)
-        client.users_playlists_change(p['uid'], diff.to_json(), 0)
+        # diff.add_insert(0, tracks=songs)
+        # client.users_playlists_change(p['uid'], diff.to_json(), 0)
 
         print_success(
             f"👍 Added {count} songs to playlist {playlist['name']}")
