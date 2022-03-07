@@ -16,6 +16,7 @@ vk-audio = "^6.9"
 vkbottle = {url = "https://github.com/vkbottle/vkbottle/archive/master.zip"}
 vkbottle-types = {url = "https://github.com/vkbottle/vkbottle-types/archive/master.zip"}
 vk = "^2.0.2"
+yandex-music = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.6.0"
