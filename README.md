@@ -1,5 +1,7 @@
 # Ongaku-MV
 
+![cover](cover.png)
+
 Script that helps to move playlists from Spotify to YT Music
 
 ## Usage
